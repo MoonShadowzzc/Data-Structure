@@ -11,6 +11,8 @@
 
 *   更详细的说明请参考博文：[《数据结构-C语言版》（严蔚敏,吴伟民版）课本源码+习题集解析使用说明](https://www.cnblogs.com/kangjianwei101/p/5221816.html) 。
 
+## 脚注
+项目提交信息中的emoji取自[gitmoji](https://gitmoji.carloscuesta.me/)。
 
 ## 附：源码目录
 ![《数据结构》源码目录](目录.png) 
