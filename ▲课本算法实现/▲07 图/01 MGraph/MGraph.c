@@ -312,6 +312,7 @@ Status DeleteVex_M(MGraph *G, VertexType_M v)
 {
 	int i, j, k, t;
 	
+	// 待删除定点序号 
 	k = LocateVex_M(*G, v);
 	
 	if(!k)
@@ -334,18 +335,29 @@ Status DeleteVex_M(MGraph *G, VertexType_M v)
 		} 
 	}
 	
+	/* 从邻接矩阵中删除该顶点所在的列与行 */ 
+	
+	// 列往前覆盖 
 	for(i=1; i<=(*G).vexnum; i++)
 	{
 		for(j=k+1; j<=(*G).vexnum; j++)
 			(*G).arcs[i][j-1] = (*G).arcs[i][j];
 	}
 	
+	// 行往上覆盖 
 	for(i=k+1; i<=(*G).vexnum; i++)
 	{
 		for(j=1; j<=(*G).vexnum-1; j++)
 			(*G).arcs[i-1][j] = (*G).arcs[i][j];
 	}
 	
+	// 从顶点数组中删除该顶点的信息 
+	for(i=k; i<(*G).vexnum; i++) 
+	{
+		(*G).vexs[i] = (*G).vexs[i+1];
+	}
+	
+	// 顶点数减一 
 	(*G).vexnum--;
 	
 	return OK;	
