@@ -128,8 +128,8 @@ int main(int argc, char *argv[])
 		
 	printf("▼13\n▲函数 DeleteVex_M 测试...\n");					//13.函数DeleteVex_M测试
 	{
-		printf("删除顶点 '%c' 后，G = \n", 'H');
-		DeleteVex_M(&G, 'H');
+		printf("删除顶点 '%c' 后，G = \n", 'B');
+		DeleteVex_M(&G, 'B');
 		OutputMGraph(G);	
 		printf("\n");
 	}
