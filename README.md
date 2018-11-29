@@ -27,10 +27,20 @@
 
 若在使用过程中发现有错误的地方，鼓励在Github提交**Issues**。
 
+## Commit图例
+
+| 序号 | emoji | 在本项目中的含义 |
+| ---- | ----- | --------------- |
+| (0) | :tada: | 初始化项目 |
+| (1) | :memo: | 更新README，或更新.gitignore，或更新其他辅助性文档 |
+| (2) | :sparkles: | 发布新内容 |
+| (3) | :recycle: | 重构代码，包括修改方法实现和注释，调整架构，删除过时内容等 |
+| (4) | :bug: | 修复代码中的BUG |
+| (5) | :pencil2: | 更正错别字，更新排版等 |
 
 ## 脚注
-项目提交信息中的emoji取自[gitmoji](https://gitmoji.carloscuesta.me/)。
 
+Commit信息中的emoji取自[gitmoji](https://gitmoji.carloscuesta.me/)。
 
 ## 附：源码目录
 
