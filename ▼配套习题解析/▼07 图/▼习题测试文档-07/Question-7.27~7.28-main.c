@@ -25,18 +25,18 @@ int main(int argc, char *argv[])
 	int i, j, k, m, n;
 	int *p;
 	
-	printf("创建并输出有向图...\n");
+	printf("创建并输出无向图...\n");
 	fp = fopen("Data/Algo_7_27-7_28.txt", "r");
 	CreateGraph_AL(fp, &G);
 	fclose(fp);
 	OutputALGraph(G);
 	printf("\n");
 	
-	v1 = 'u';
-	v2 = 'v';
+	v1 = 'a';
+	v2 = 'c';
 	i = LocateVex_AL(G, v1);
 	j = LocateVex_AL(G, v2);
-	k = 3;
+	k = 4;
 	
 	printf("███ 题 7.27 验证... ███\n");
 	Algo_7_27(G, i, j, k);
@@ -141,8 +141,10 @@ void DFS_7_27(ALGraph G, int i, int j, int k)
 			DFS_7_27(G, w, j, k);
 	}
 	
-	if(!w && !mark)
+	if(!w && !mark){
+		visited[i] = FALSE;
 		Pop_Sq(&S, &e);
+	}
 }
 
 void DFS_7_28(ALGraph G, int i, int j)
